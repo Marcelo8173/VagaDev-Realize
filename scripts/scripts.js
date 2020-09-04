@@ -2,9 +2,8 @@
 function sendForm(){
     let numberOfcolumns = document.querySelector("#columns");
     let numberOflines = document.querySelector("#lines");
-
     createLayout(numberOflines.value, numberOfcolumns.value);
-
+    restartAplication(numberOflines , numberOfcolumns);
 }
 
 
@@ -29,5 +28,7 @@ function createLayout(numberOflines , numberOfcolumns){
 }
 
 
-
-
+function restartAplication(numberOflines , numberOfcolumns){
+    numberOfcolumns.value = 0; 
+    numberOflines.value = 0;
+}
